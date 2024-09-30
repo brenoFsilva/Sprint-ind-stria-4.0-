@@ -1,0 +1,41 @@
+cpp
+#include <WiFi.h>
+#define TRIG_PIN 13
+#define ECHO_PIN 12
+
+const char* ssid = "SSID";
+const char* password = "PASSWORD";
+
+void setup() {
+  pinMode(TRIG_PIN, OUTPUT);
+  pinMode(ECHO_PIN, INPUT);
+  Serial.begin(115200);
+  WiFi.begin(ssid, password);
+
+  while (WiFi.status() != WL_CONNECTED) {
+    delay(1000);
+    Serial.println("Connecting to WiFi...");
+  }
+  Serial.println("Connected to WiFi");
+}
+
+void loop() {
+  long duration, distance;
+  
+  digitalWrite(TRIG_PIN, LOW);
+  delayMicroseconds(2);
+  digitalWrite(TRIG_PIN, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(TRIG_PIN, LOW);
+  
+  duration = pulseIn(ECHO_PIN, HIGH);
+  distance = duration * 0.034 / 2;
+
+  if (distance <= 10) {
+    Serial.println("Carrinho carregado");
+  } else {
+    Serial.println("Carrinho vazio");
+  }
+  
+  delay(1000);
+}
