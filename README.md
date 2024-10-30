@@ -35,3 +35,13 @@ A aplicação desenvolvida é capaz de:
 - Monitorar a localização de plataformas de forma precisa e em tempo real.
 - Exibir as rotas dos carrinhos na fábrica em um mapa interativo.
 - Abaixo estão alguns prints demonstrando o funcionamento da aplicação:
+
+
+
+Spint 4 Testando o ESP32
+
+Ferramenta de teste:
+- 
+
+
+
