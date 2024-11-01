@@ -4,7 +4,7 @@
 
 A solução proposta utiliza um ESP32 como dispositivo IoT para rastrear a localização de carrinhos na fábrica da John Deere. 
 
-![Arquitetura do site JDuber](Assets/ArquiteturadositeJDuber.drawio.png)
+![Arquitetura do site JDuber.drawio.png](Assets/ArquiteturadositeJDuber.drawio.png)
 
 
 ### Componentes
